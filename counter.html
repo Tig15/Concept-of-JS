@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h3 {
+            font-size: 20px;
+            color: aliceblue;
+        }
+
+        .counter {
+            font-size: 60px;
+            color: whitesmoke;
+        }
+
+        .done {
+            font-size: 25px;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Keep On Counting</h3>
+        <p class="counter">1000</p>
+        <p class="done">Great Done!</p>
+    </div>
+    <script>
+        const counter = document.querySelector('.counter')
+        const done = document.querySelector('.done')
+
+        let count = 1
+
+        setInterval(() => {
+            if (count < 1000) {
+                count++
+                counter.innerHTML = count
+            }
+        }, 1)
+
+        setTimeout(() => {
+            done.innerHTML = "Great! Count is Finished!"
+        }, 7000)
+    </script>
+</body>
+
+</html>
